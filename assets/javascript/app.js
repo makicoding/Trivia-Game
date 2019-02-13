@@ -52,7 +52,7 @@ var gameReset = function() {
 console.log(qa[0].question)
 console.log(qa[0].correct)
 
-var game1 = function() {
+var game1 = function() {        // change #
 
     // Show Counter
     // Empty Correct Container
@@ -62,15 +62,9 @@ var game1 = function() {
     $(".correctCommentContainer").html("");
     $(".incorrectCommentContainer").html("");
 
-    $(".possibleAnswerContainer_01").show();    // show / hide
-    $(".possibleAnswerContainer_02").show();    // show / hide
-    $(".possibleAnswerContainer_03").show();    // show / hide
-    $(".possibleAnswerContainer_04").show();    // show / hide
-
-    $(".possibleAnswerContainer_05").hide();    // show / hide
-    $(".possibleAnswerContainer_06").hide();    // show / hide
-    $(".possibleAnswerContainer_07").hide();    // show / hide
-    $(".possibleAnswerContainer_08").hide();    // show / hide
+    $(".G1").show();    // show / hide
+    $(".G2").hide();    // show / hide
+    $(".G3").hide();    // show / hide
     
 
     // Timer
@@ -139,7 +133,7 @@ var game1 = function() {
 // ----------------------------------------
 // Function for Game 2
 
-var game2 = function() {
+var game2 = function() {        // change #
 
     // Show Counter
     // Empty Correct Container
@@ -149,15 +143,10 @@ var game2 = function() {
     $(".correctCommentContainer").html("");
     $(".incorrectCommentContainer").html("");
 
-    $(".possibleAnswerContainer_01").hide();    // show / hide
-    $(".possibleAnswerContainer_02").hide();    // show / hide
-    $(".possibleAnswerContainer_03").hide();    // show / hide
-    $(".possibleAnswerContainer_04").hide();    // show / hide
 
-    $(".possibleAnswerContainer_05").show();    // show / hide
-    $(".possibleAnswerContainer_06").show();    // show / hide
-    $(".possibleAnswerContainer_07").show();    // show / hide
-    $(".possibleAnswerContainer_08").show();    // show / hide
+    $(".G1").hide();    // show / hide
+    $(".G2").show();    // show / hide
+    $(".G3").hide();    // show / hide
     
     
     // Timer
@@ -180,9 +169,7 @@ var game2 = function() {
 
             if(timeLeft === -3){
                 clearInterval(downloadTimer);
-                // display play again button here 
-                // once pressed, game goes back to the start. Or refreshes page
-                // gameReset();
+                game3();
             }
 
         }
@@ -225,6 +212,87 @@ var game2 = function() {
 
 }
 
+// ----------------------------------------
+// Function for Game 3
+
+var game3 = function() {        // change #
+
+    // Show Counter
+    // Empty Correct Container
+    // Empty Incorrect Comment Container
+    // Show / hide certain Possible Answer Containers
+    $("#countdown").show();
+    $(".correctCommentContainer").html("");
+    $(".incorrectCommentContainer").html("");
+
+
+    $(".G1").hide();    // show / hide
+    $(".G2").hide();    // show / hide
+    $(".G3").show();    // show / hide
+    
+    
+    // Timer
+    document.getElementById("countdown").innerHTML = "10 seconds remaining";
+
+    var timeLeft = 9;
+
+    var downloadTimer = setInterval(function(){
+        document.getElementById("countdown").innerHTML = timeLeft + " seconds remaining";
+        timeLeft -= 1;
+
+        if(timeLeft === 0)
+        unansweredCount++;
+        $(".unansweredCountContainer").html("Unanswered: " + unansweredCount); 
+
+        if(timeLeft <= 0){
+
+            document.getElementById("countdown").innerHTML = "Time's up!";
+            $(".incorrectCommentContainer").html("Correct answer is: " + qa[2].correct);     // change [#] 
+
+            if(timeLeft === -3){
+                clearInterval(downloadTimer);
+                //game3();
+            }
+
+        }
+
+    }, 1000);    
+ 
+    
+    $(".questionContainer").html(qa[2].question);               // change [#]
+    $(".possibleAnswerContainer_09").html(qa[2].correct);     // change [#] and incorrect/correct
+    $(".possibleAnswerContainer_10").html(qa[2].incorrect1);        // change [#] and incorrect/correct
+    $(".possibleAnswerContainer_11").html(qa[2].incorrect2);     // change [#] and incorrect/correct
+    $(".possibleAnswerContainer_12").html(qa[2].incorrect3);     // change [#] and incorrect/correct
+
+    // When the user clicks the correct answer    
+    $(".possibleAnswerContainer_09").on("click", function() {    // change _#
+        correctCount++;
+        $(".correctCountContainer").html("Correct answers: " + correctCount); 
+        $(".correctCommentContainer").html("Correct!");  
+   
+        timeLeft = 0;
+        if(timeLeft <= 0){
+            $("#countdown").hide();
+            $(".incorrectCommentContainer").hide();
+        }
+
+    });
+
+    // When the user clicks the incorrect answer
+    $(".possibleAnswerContainer_10, .possibleAnswerContainer_11, .possibleAnswerContainer_12").on("click", function() {    // change _#
+        incorrectCount++;
+        $(".incorrectCountContainer").html("Incorrect answers: " + incorrectCount); 
+        $(".incorrectCommentContainer").html("Correct answer is: " + qa[2].correct);                         // change [#]
+
+        timeLeft = 0;
+        if(timeLeft <= 0){
+            $("#countdown").hide();
+        }
+
+    });
+
+}
 
 
 
