@@ -26,18 +26,18 @@ var qa = [
 ]
 
 
-//var correctCount = 0;
-//var incorrectCount = 0;
-//var unansweredCount = 0;
+var correctCount = 0;
+var incorrectCount = 0;
+var unansweredCount = 0;
 
 // ----------------------------------------
 // Function for Overall Game
 
 var gameReset = function() {
 
-    //$(".correctCountContainer").html("Correct answers: " + correctCount);
-    //$(".incorrectCountContainer").html("Incorrect answers: " + incorrectCount);
-    //$(".unansweredCountContainer").html("Unanswered: " + unansweredCount);
+    $(".correctCountContainer").html("Correct answers: " + correctCount);
+    $(".incorrectCountContainer").html("Incorrect answers: " + incorrectCount);
+    $(".unansweredCountContainer").html("Unanswered: " + unansweredCount);
 
     $(".correctCommentContainer").html("");
     $(".incorrectCommentContainer").html("");
@@ -82,6 +82,10 @@ var game1 = function() {
         document.getElementById("countdown").innerHTML = timeLeft + " seconds remaining";
         timeLeft -= 1;
 
+        if(timeLeft === 0)
+        unansweredCount++;
+        $(".unansweredCountContainer").html("Unanswered: " + unansweredCount); 
+
         if(timeLeft <= 0){
 
             document.getElementById("countdown").innerHTML = "Time's up!";
@@ -105,7 +109,8 @@ var game1 = function() {
 
     // When the user clicks the correct answer
     $(".possibleAnswerContainer_02").on("click", function() {    // change _#
-        //$(".correctCountContainer").html("Correct answers: " + [correctCount + 1]); 
+        correctCount++;
+        $(".correctCountContainer").html("Correct answers: " + correctCount); 
         $(".correctCommentContainer").html("Correct!");  
    
         timeLeft = 0;
@@ -118,7 +123,8 @@ var game1 = function() {
 
     // When the user clicks the incorrect answer
     $(".possibleAnswerContainer_01, .possibleAnswerContainer_03, .possibleAnswerContainer_04").on("click", function() {    // change _#
-        //$(".incorrectCountContainer").html("Incorrect answers: " + [incorrectCount + 1]); 
+        incorrectCount++;
+        $(".incorrectCountContainer").html("Incorrect answers: " + incorrectCount); 
         $(".incorrectCommentContainer").html("Correct answer is: " + qa[0].correct);                         // change [#]
 
         timeLeft = 0;
@@ -163,6 +169,10 @@ var game2 = function() {
         document.getElementById("countdown").innerHTML = timeLeft + " seconds remaining";
         timeLeft -= 1;
 
+        if(timeLeft === 0)
+        unansweredCount++;
+        $(".unansweredCountContainer").html("Unanswered: " + unansweredCount); 
+
         if(timeLeft <= 0){
 
             document.getElementById("countdown").innerHTML = "Time's up!";
@@ -188,7 +198,8 @@ var game2 = function() {
 
     // When the user clicks the correct answer    
     $(".possibleAnswerContainer_08").on("click", function() {    // change _#
-        //$(".correctCountContainer").html("Correct answers: " + [correctCount + 1]); 
+        correctCount++;
+        $(".correctCountContainer").html("Correct answers: " + correctCount); 
         $(".correctCommentContainer").html("Correct!");  
    
         timeLeft = 0;
@@ -201,7 +212,8 @@ var game2 = function() {
 
     // When the user clicks the incorrect answer
     $(".possibleAnswerContainer_05, .possibleAnswerContainer_06, .possibleAnswerContainer_07").on("click", function() {    // change _#
-        //$(".incorrectCountContainer").html("Incorrect answers: " + [incorrectCount + 1]); 
+        incorrectCount++;
+        $(".incorrectCountContainer").html("Incorrect answers: " + incorrectCount); 
         $(".incorrectCommentContainer").html("Correct answer is: " + qa[1].correct);                         // change [#]
 
         timeLeft = 0;
