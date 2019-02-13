@@ -42,6 +42,8 @@ var gameReset = function() {
     $(".correctCommentContainer").html("");
     $(".incorrectCommentContainer").html("");
 
+    $(".gameResetContainer").html("");
+
     game1();
 
 }
@@ -251,7 +253,10 @@ var game3 = function() {        // change #
 
             if(timeLeft === -3){
                 clearInterval(downloadTimer);
-                //game3();
+                $(".gameResetContainer").html("Play again!");
+                $(".gameResetContainer").on("click", function() {
+                    gameReset();
+                });
             }
 
         }
