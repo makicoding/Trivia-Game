@@ -60,30 +60,11 @@ var gameStart = function() {
     // Game Start Button
     document.getElementsByClassName("gameStartButton")[0].innerHTML = "Click here to start game"; 
     document.getElementsByClassName("gameStartButton")[0].addEventListener("click", function() {
-        gameReset();
+        game1();
 
     });
 
 }
-
-// ----------------------------------------
-// Function for Game Reset
-
-var gameReset = function() {
-
-    // Hide Game Reset Button 
-    document.getElementsByClassName("gameResetButton")[0].style.display = "none";
-
-    // Set Counters to zero
-    correctCount = 0;
-    incorrectCount = 0;
-    unansweredCount = 0;
-
-    // Go to Game 1
-    game1();
-
-}
-
 
 // ----------------------------------------
 // Function for Game 1
@@ -504,6 +485,80 @@ var game3 = function() {        // change #
      
 }
 
+// ----------------------------------------
+// Function for Game Reset
+
+var gameReset = function() {
+
+    // Hide Game Reset Button 
+    document.getElementsByClassName("gameResetButton")[0].style.display = "none";
+
+
+    // Remove Event Listeners in an Element
+    // Here we will clone the node which will remove all the event listeners for each element.
+    // We could also remove event listeners by using .removeEventListener
+
+    var oldElement01 = document.getElementsByClassName("possibleAnswerButton_01")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement01 = oldElement01.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement01.parentNode.replaceChild(newElement01, oldElement01);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+    var oldElement02 = document.getElementsByClassName("possibleAnswerButton_02")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement02 = oldElement02.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement02.parentNode.replaceChild(newElement02, oldElement02);                   // change oldElement#   //  change newElement#     //  change oldElement#
+    
+    var oldElement03 = document.getElementsByClassName("possibleAnswerButton_03")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement03 = oldElement03.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement03.parentNode.replaceChild(newElement03, oldElement03);                   // change oldElement#   //  change newElement#     //  change oldElement#
+    
+    var oldElement04 = document.getElementsByClassName("possibleAnswerButton_04")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement04 = oldElement04.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement04.parentNode.replaceChild(newElement04, oldElement04);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+
+    var oldElement05 = document.getElementsByClassName("possibleAnswerButton_05")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement05 = oldElement05.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement05.parentNode.replaceChild(newElement05, oldElement05);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+    var oldElement06 = document.getElementsByClassName("possibleAnswerButton_06")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement06 = oldElement06.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement06.parentNode.replaceChild(newElement06, oldElement06);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+    var oldElement07 = document.getElementsByClassName("possibleAnswerButton_07")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement07 = oldElement07.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement07.parentNode.replaceChild(newElement07, oldElement07);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+    var oldElement08 = document.getElementsByClassName("possibleAnswerButton_08")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement08 = oldElement08.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement08.parentNode.replaceChild(newElement08, oldElement08);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+
+    var oldElement09 = document.getElementsByClassName("possibleAnswerButton_09")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement09 = oldElement09.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement09.parentNode.replaceChild(newElement09, oldElement09);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+    var oldElement10 = document.getElementsByClassName("possibleAnswerButton_10")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement10 = oldElement10.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement10.parentNode.replaceChild(newElement10, oldElement10);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+    var oldElement11 = document.getElementsByClassName("possibleAnswerButton_11")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement11 = oldElement11.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement11.parentNode.replaceChild(newElement11, oldElement11);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+    var oldElement12 = document.getElementsByClassName("possibleAnswerButton_12")[0];   // change oldElement#   //  change possibleAnswerButton_#
+    var newElement12 = oldElement12.cloneNode(true);                                    // change newElement#   //  change oldElement#
+    oldElement12.parentNode.replaceChild(newElement12, oldElement12);                   // change oldElement#   //  change newElement#     //  change oldElement#
+
+
+    // Set Counters to zero
+    correctCount = 0;
+    incorrectCount = 0;
+    unansweredCount = 0;
+
+    
+    // Go to Game 1
+    game1();
+
+}
 
 
 
