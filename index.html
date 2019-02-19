@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">    
 
     <!-- Google Fonts -->
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Signika" rel="stylesheet">
 
     <!-- CSS Link -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -22,61 +22,78 @@
 </head>
 <body>
     <!-- Background Image -->
+    <img class="backgroundImage" src="assets/images/PSQuality8/3000px_CinemaIllustration.jpg" alt="Background">
 
+    <!-- Game Container Background -->
+    <div class="overallGameContainerBackground"></div>
 
     <!-- Game Container -->
-    <div class="gameTitle">'90s Movie Trivia</div>    
+    <div class="overallGameContainer">
 
-    <div class="gameStartText"></div>
-    <button class="gameStartButton"></button>
+        <div class="gameTitle">'90s Movie Trivia</div>    
 
-    <div class="countdown"></div>
+        <div class="gameStartText"></div>
+        <button class="gameStartButton"></button>
 
-    <div class="questionContainer"></div>
+        <div class="countdown"></div>
 
-    <button class="possibleAnswerButton_01 G1"></button><br>
-    <button class="possibleAnswerButton_02 G1"></button><br>
-    <button class="possibleAnswerButton_03 G1"></button><br>
-    <button class="possibleAnswerButton_04 G1"></button>
-    
-    <button class="possibleAnswerButton_05 G2"></button><br>
-    <button class="possibleAnswerButton_06 G2"></button><br>
-    <button class="possibleAnswerButton_07 G2"></button><br>
-    <button class="possibleAnswerButton_08 G2"></button>
+        <div class="questionContainer"></div>
 
-    <button class="possibleAnswerButton_09 G3"></button><br>
-    <button class="possibleAnswerButton_10 G3"></button><br>
-    <button class="possibleAnswerButton_11 G3"></button><br>
-    <button class="possibleAnswerButton_12 G3"></button>
+        <div class="buttonsForQuestion1">
+            <button class="possibleAnswerButton_01"></button><br>
+            <button class="possibleAnswerButton_02"></button><br>
+            <button class="possibleAnswerButton_03"></button><br>
+            <button class="possibleAnswerButton_04"></button>
+        </div>
 
-    <button class="possibleAnswerButton_13 G3"></button><br>
-    <button class="possibleAnswerButton_14 G3"></button><br>
-    <button class="possibleAnswerButton_15 G3"></button><br>
-    <button class="possibleAnswerButton_16 G3"></button>
+        <div class="buttonsForQuestion2">
+            <button class="possibleAnswerButton_05"></button><br>
+            <button class="possibleAnswerButton_06"></button><br>
+            <button class="possibleAnswerButton_07"></button><br>
+            <button class="possibleAnswerButton_08"></button>
+        </div>
 
-    <button class="possibleAnswerButton_17 G3"></button><br>
-    <button class="possibleAnswerButton_18 G3"></button><br>
-    <button class="possibleAnswerButton_19 G3"></button><br>
-    <button class="possibleAnswerButton_20 G3"></button>
+        <div class="buttonsForQuestion3">
+            <button class="possibleAnswerButton_09"></button><br>
+            <button class="possibleAnswerButton_10"></button><br>
+            <button class="possibleAnswerButton_11"></button><br>
+            <button class="possibleAnswerButton_12"></button>
+        </div>
 
-    <div class="correctCommentContainer"></div>
-    <div class="incorrectCommentContainer"></div>
+        <div class="buttonsForQuestion4">
+            <button class="possibleAnswerButton_13"></button><br>
+            <button class="possibleAnswerButton_14"></button><br>
+            <button class="possibleAnswerButton_15"></button><br>
+            <button class="possibleAnswerButton_16"></button>
+        </div>
 
-    <br></br>
+        <div class="buttonsForQuestion5">
+            <button class="possibleAnswerButton_17"></button><br>
+            <button class="possibleAnswerButton_18"></button><br>
+            <button class="possibleAnswerButton_19"></button><br>
+            <button class="possibleAnswerButton_20"></button>
+        </div>
 
-    <div class="correctCountContainer"></div>
-    <div class="incorrectCountContainer"></div>
-    <div class="unansweredCountContainer"></div>
+        <div class="correctCommentContainer"></div>
+        <div class="incorrectCommentContainer"></div>
 
-    <br></br>
+        <br></br>
 
-    <!-- Game Reset Button (no page reload) -->
-    <button class="gameResetButton"></button>
+        <div class="correctCountContainer"></div>
+        <div class="incorrectCountContainer"></div>
+        <div class="unansweredCountContainer"></div>
 
-    <!-- Game Reset Button (page reload) -->
-    <!--
-    <button class="gameResetButton" onclick="onClickReload()"></button>
-    -->
+        <br></br>
+
+        <!-- Game Reset Button (no page reload) -->
+        <button class="gameResetButton"></button>
+
+        <!-- Game Reset Button (page reload) -->
+        <!--
+        <button class="gameResetButton" onclick="onClickReload()"></button>
+        -->
+
+    </div>
 
 
     <!-- JavaScript Link -->

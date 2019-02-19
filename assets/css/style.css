@@ -1,0 +1,181 @@
+body {
+    background-color: #00204c;
+}
+
+.backgroundImage {
+    width: 1180px;
+
+    border: 2px solid white;
+
+    border-radius: 40px;
+
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-590px, 0px);
+}
+
+/* ---------------------------------------- */
+.overallGameContainer {
+    width: 400px;
+    height: 560px;
+
+    padding: 20px;
+
+    background-color: none;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translate(120px, 0px);
+}
+
+.overallGameContainerBackground {
+    width: 400px;
+    height: 500px;
+
+    padding: 20px;
+    
+    background-color: none;
+
+    opacity: .6;
+
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translate(100px, 0px);
+}
+
+/* ---------------------------------------- */
+.gameTitle {
+    margin: 0px 0px 30px 0px;
+
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+}
+
+.gameStartText {
+    margin: 0px 0px 30px 0px;
+}
+
+.countdown {
+    font-size: 22px;
+
+    position: absolute;
+    top: 80px;
+    left: 20px;
+}
+
+.questionContainer {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+}
+
+.buttonsForQuestion1 {
+    position: absolute;
+    top: 210px;
+    left: 20px;
+}
+
+.buttonsForQuestion2 {
+    position: absolute;
+    top: 210px;
+    left: 20px;
+}
+
+.buttonsForQuestion3 {
+    position: absolute;
+    top: 210px;
+    left: 20px;
+}
+
+.buttonsForQuestion4 {
+    position: absolute;
+    top: 210px;
+    left: 20px;
+}
+
+.buttonsForQuestion5 {
+    position: absolute;
+    top: 210px;
+    left: 20px;
+}
+
+.correctCommentContainer {
+    color: white;
+
+    position: absolute;
+    top: 420px;
+    left: 20px;
+}
+
+.incorrectCommentContainer {
+    color: white;
+
+    position: absolute;
+    top: 420px;
+    left: 20px;
+}
+
+.correctCountContainer {
+    color: white;
+
+    position: absolute;
+    top: 470px;
+    left: 20px;
+}
+
+.incorrectCountContainer {
+    color: white;
+
+    position: absolute;
+    top: 490px;
+    left: 20px;
+}
+
+.unansweredCountContainer {
+    color: white;
+
+    position: absolute;
+    top: 510px;
+    left: 20px;    
+}
+
+.gameResetButton {
+    position: absolute;
+    top: 570px;
+    left: 20px;
+}
+
+/* ---------------------------------------- */
+button {
+    padding: 2px 20px 1px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 0;
+
+    background-color: white;
+
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    outline: 0;
+
+    display: inline-block;
+}
+
+button:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: orange;
+}
