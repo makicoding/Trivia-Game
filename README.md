@@ -1,4 +1,4 @@
-# Trivia-Game
+# Trivia Game
 
 [Click here to view deployed game](https://makicoding.github.io/Trivia-Game/index.html)
 <br>
